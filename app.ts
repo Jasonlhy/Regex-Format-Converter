@@ -16,6 +16,7 @@ export class PerlToBasic {
     }
 
     public revert(basicRegexText: string) {
+        // reverses the left, right only ...
         var revertChar: {} = _.transform(this.characters
             , (sum: {}, value: string, key: string) => sum[value] = key
             , {});
@@ -30,6 +31,6 @@ export class PerlToBasic {
     }
 }
 
-let p = new PerlToBasic();
-console.log("convert: " + p.convert("aaa+?"));
-console.log("revert: " + p.revert("aaa\\+\\?"));
+// let p = new PerlToBasic();
+// console.log("convert: " + p.convert("aaa+?"));
+// console.log("revert: " + p.revert("aaa\\+\\?"));
