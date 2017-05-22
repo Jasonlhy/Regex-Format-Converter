@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Regex Format Converter</title>
+    <script src="dist/app.js"></script>
+    <script>
+        function convert(){
+            var converter = new app.PerlToBasic();
+
+            var perl = document.getElementById("perl");
+            var basic = document.getElementById("basic");
+            basic.value = converter.convert(perl.value);
+        }
+    </script>
+</head>
+<body>
+    Perl like Regex (JS, C#, Java): <input id="perl" type="text"><br>
+    <button onclick="convert();">convert</button><br>
+    Basic Regex (Vim, Grep Basic Mode): <input id="basic" type="text">
+</body>
+</html>
